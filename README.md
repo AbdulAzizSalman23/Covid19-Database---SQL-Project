@@ -1,37 +1,60 @@
-# Covid19-Database---SQL-Project
+# COVID-19 Data Analysis (SQL Project)
 
-Project Goal
+## Project Goal
+The objective of this project is to analyze global COVID-19 datasets using SQL to derive insights into infection trends, mortality rates, and vaccination progress across different countries and continents.
 
-The objective of this project was to analyze global COVID-19 data using SQL to extract meaningful insights related to infection trends, mortality rates, and vaccination progress across different regions.
+## Problem Statement
+The COVID-19 pandemic generated large volumes of global health data. Extracting meaningful insights from this data requires efficient querying, aggregation, and analytical techniques.
 
-Problem Statement
+This project uses SQL queries to explore pandemic trends and analyze how infection rates, death rates, and vaccination progress vary across different regions.
 
-The COVID-19 pandemic generated large volumes of data across countries and regions. However, deriving meaningful insights from this data requires structured querying and analytical techniques.
-This project uses SQL to analyze COVID-19 datasets and identify trends in infection rates, deaths, and vaccination distribution.
+## Tools & Technologies Used
++ SQL  
++ Microsoft SQL Server  
++ Window Functions  
++ Common Table Expressions (CTE)  
++ Data Views  
 
-Tools & Technologies Used:
-- SQL (Microsoft SQL Server / SQL database environment)
-- Data querying and aggregation techniques
-- Database joins and analytical functions
+## Data Analysis Performed
 
-Key Steps Performed
+### Infection and Mortality Analysis
+SQL queries were used to calculate:
 
-This SQL file contains a series of queries used to analyze global COVID-19 data, focusing on total cases, deaths, vaccination rates, and population impact. Key analysis and operations include:
-+ Exploring COVID-19 data: Filtering and sorting COVID-19 cases and deaths by location and date.
-+ India-specific analysis: Comparing total cases, death percentages, and population impact within India.
-+ Global comparisons: Identifying countries with the highest infection rates and continents with the highest death rates.
-+ Vaccination analysis: Examining global vaccination progress by comparing total population vs. cumulative vaccinations.
-+ Common Table Expressions (CTEs): Used for calculating cumulative vaccinated people and their percentage of the population.
-+ Views for visualization: Two views are created:
-   1. Total population vs. total vaccinations.
-   2. Highest death rates by location.
++ Total cases vs total deaths  
++ Death percentage for different countries  
++ Total cases relative to population size  
 
-Key Insights
+This helps analyze the severity of the pandemic across regions.
 
-+ Significant variation exists in infection and mortality rates across countries.
-+ Vaccination progress strongly correlates with reduced mortality trends in many regions.
-+ SQL queries can efficiently extract insights from large public health datasets.
+### Global Trend Analysis
+Global metrics were calculated by aggregating daily cases and deaths across all countries to understand global pandemic progression over time.
 
-Business Impact
+### Country-Level Infection Rate Analysis
+Countries were compared based on:
 
-This project demonstrates how structured data analysis using SQL can support data-driven decision making in public health policy, resource allocation, and pandemic response planning.
++ Maximum infection count  
++ Percentage of population affected  
+
+This allowed identification of regions most impacted by the pandemic.
+
+### Vaccination Progress Analysis
+Vaccination datasets were joined with death datasets to analyze vaccination progress.
+
+A **window function** was used to compute cumulative vaccination counts for each country over time.
+
+### Common Table Expression (CTE)
+A CTE was created to calculate vaccination percentage relative to population size.
+
+### SQL Views for Visualization
+Two SQL views were created for downstream visualization and analysis:
+
++ Total Population vs Vaccination  
++ Countries with Highest Death Rate  
+
+## Key Insights
++ Infection rates varied significantly across countries relative to population size  
++ Global death percentages fluctuated over time as the pandemic progressed  
++ Vaccination campaigns significantly increased cumulative vaccination coverage across many countries  
+
+## Business Impact
+This project demonstrates how SQL-based analytics can be used to process large datasets and generate meaningful insights for data-driven decision making. The techniques used in this project are applicable to fields such as healthcare analytics, policy planning, and large-scale data analysis.
